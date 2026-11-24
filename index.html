@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的个人网站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="mark" href="#top">个人网站</a>
+      <nav>
+        <a href="#about">关于</a>
+        <a href="#calculator">计算器</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <p class="eyebrow">HTML · CSS · JavaScript</p>
+      <h1>你好，这是我的小站。</h1>
+      <p class="lead">页面很简单：一段自我介绍，加上一台可以按的计算器。结构写在 HTML 里，样子写在 CSS 里，计算写在 JavaScript 里。</p>
+
+      <section id="about">
+        <h2>关于</h2>
+        <p>我在学着自己做网页。HTML 负责把内容放好，CSS 负责让它看起来清楚，JavaScript 负责让按钮真的去算数。</p>
+      </section>
+
+      <section id="calculator" aria-labelledby="calc-title">
+        <h2 id="calc-title">计算器</h2>
+        <p class="note">支持加减乘除，也可以用键盘输入数字和运算符。</p>
+
+        <div class="calculator">
+          <p class="expr" id="expr"></p>
+          <p class="screen" id="screen" aria-live="polite">0</p>
+          <div class="keys" role="group" aria-label="计算器按键">
+            <button type="button" data-action="clear">C</button>
+            <button type="button" data-action="sign">±</button>
+            <button type="button" data-action="percent">%</button>
+            <button type="button" class="op" data-action="operator" data-value="/">÷</button>
+
+            <button type="button" data-action="digit" data-value="7">7</button>
+            <button type="button" data-action="digit" data-value="8">8</button>
+            <button type="button" data-action="digit" data-value="9">9</button>
+            <button type="button" class="op" data-action="operator" data-value="*">×</button>
+
+            <button type="button" data-action="digit" data-value="4">4</button>
+            <button type="button" data-action="digit" data-value="5">5</button>
+            <button type="button" data-action="digit" data-value="6">6</button>
+            <button type="button" class="op" data-action="operator" data-value="-">−</button>
+
+            <button type="button" data-action="digit" data-value="1">1</button>
+            <button type="button" data-action="digit" data-value="2">2</button>
+            <button type="button" data-action="digit" data-value="3">3</button>
+            <button type="button" class="op" data-action="operator" data-value="+">+</button>
+
+            <button type="button" class="wide" data-action="digit" data-value="0">0</button>
+            <button type="button" data-action="decimal">.</button>
+            <button type="button" class="eq" data-action="equals">=</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>打开 index.html 即可使用。样式在 style.css，计算逻辑在 calculator.js。</footer>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
